@@ -22,6 +22,8 @@ class Pair<K, V> {
 
 Java users need to return result in Pair class
 For Example -> return new Pair(minimum,maximum)
+A generic class is a class that can work with any data type, instead of being locked to a specific one.
+It uses type parameters like <T>, <K, V>, etc. to make the class flexible.
 */
 
 class Solution {
