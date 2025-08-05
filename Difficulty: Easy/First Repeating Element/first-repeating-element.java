@@ -1,6 +1,6 @@
 class Solution {
     public static int firstRepeated(int[] arr) {
-      LinkedHashMap<Integer,Integer> map=new LinkedHashMap<>();
+       HashMap<Integer,Integer> map=new HashMap<>();
       int res=0;
       for(int i=0;i<arr.length;i++){
           map.put(arr[i],map.getOrDefault(arr[i],0)+1);
