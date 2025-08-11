@@ -5,7 +5,7 @@ class Solution {
           return 0;
           
         for(int i=0;i<arr.length;i++){
-            coverage=Math.max(coverage,arr[i]+i);
+            coverage=Math.max(coverage,arr[i]+i); // Choose the max area/distance for long jump
             if(i==lastJumpIdx){
                 if(coverage==i){
                     totalJumps=-1;
