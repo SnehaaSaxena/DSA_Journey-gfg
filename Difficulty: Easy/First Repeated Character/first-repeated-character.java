@@ -1,12 +1,10 @@
-// User function Template for Java
 class Solution {
     String firstRepChar(String s) {
-      TreeMap<String,Integer> map=new TreeMap<>();
+      HashSet<Character> set=new HashSet<>();
       for(int i=0;i<s.length();i++){
           char ch=s.charAt(i);
-          String str=Character.toString(ch);
-          if(map.containsKey(str)) return str;
-          map.put(str,map.getOrDefault(str,0)+1);
+          if(set.contains(ch)) return String.valueOf(ch);
+          else set.add(ch);
       }
         return "-1";
     }
