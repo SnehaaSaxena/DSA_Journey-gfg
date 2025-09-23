@@ -21,7 +21,7 @@ class Solution {
           list.add(min);
           
         if(arr1.get(i).equals(min)){
-           while(i<arr1.size() && arr1.get(i).equals(min)) 
+           while(i<arr1.size() && arr1.get(i).equals(min))  // while loop exist to check for duplicate values
              i++;
         }
          if(arr2.get(j).equals(min)){
