@@ -1,7 +1,9 @@
-/*Complete the function(s) below*/
 class GfG {
+    Stack<Integer> minStack=new Stack<>();
     public void push(int a, Stack<Integer> s) {
         s.push(a);
+        if(minStack.isEmpty() || a<minStack.peek())
+         minStack.push(a);
     }
 
     public int pop(Stack<Integer> s) {
@@ -10,10 +12,12 @@ class GfG {
     }
 
     public int min(Stack<Integer> s) {
-        int min=Integer.MAX_VALUE;
-        while(!s.isEmpty())
-           min=Math.min(min,s.pop());
-           return min;
+        // int min=Integer.MAX_VALUE;
+        // while(!s.isEmpty())
+        //   min=Math.min(min,s.pop());
+        //   return min;
+        
+        return minStack.peek();
     }
 
     public boolean isFull(Stack<Integer> s, int n) {
