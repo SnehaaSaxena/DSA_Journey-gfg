@@ -10,18 +10,18 @@ class Node
 class Solution {
     // Function to remove duplicates from sorted linked list.
     Node removeDuplicates(Node head) {
-        // Your code here
-        Node temp=head;
-        Node next=head.next;
-        while(next!=null){
-            if(temp.data==next.data){
-               temp.next=temp.next.next;
-               next=temp.next;
-            }else{
-                temp=next;
-                next=next.next;
+        Node curr=head;
+            while(curr.next!=null){
+               while(curr.data==curr.next.data){
+                 curr.next=curr.next.next;
+                 if(curr.next==null) break;
+               }
+                  if(curr.next!=null)
+                  curr=curr.next;
+                  else break;
             }
-        }
-        return head;
+           
+        
+       return head; 
     }
 }
