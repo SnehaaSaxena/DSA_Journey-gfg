@@ -2,31 +2,34 @@
 
 class Solution {
     public static String reverseString(String s) {
-       //APPROACH 1
-        // String str=new String();
-        // for(int i=s.length()-1;i>=0;i--){
-        //     char ch=s.charAt(i);
-        //     str+=ch;
-        // }
-        // return str;
+         //    String str="";
+        //   for(int i=s.length()-1;i>=0;i--){
+        //       str+=s.charAt(i);
+        //   }
+        //   return str; 
         
-        //APPROACH 2
+        // 2nd APPROACH(STRING BUILDER METHOD)
         // StringBuilder sb=new StringBuilder(s);
-        // sb.reverse();
-        // return sb.toString();
+        //     return sb.reverse().toString();
         
-        // APPROACH 3
-        Stack<Character> st=new Stack<>();
-        for(int i=0;i<s.length();i++){
-            char ch=s.charAt(i);
-            st.push(ch);
+        // 3rd APPROACH (STACK)
+        // String res="";
+        // Stack<Character> st=new Stack<>();
+        // for(int i=0;i<s.length();i++){
+        //     st.push(s.charAt(i));
+        // }
+        // while(!st.isEmpty()){
+        //     res+=st.pop();
+        // }
+        // return res;
+        
+        
+        //4th APPROACH (TO CHAR ARRAY)
+        char str[]=s.toCharArray();
+        String res="";
+        for(int i=str.length-1;i>=0;i--){
+            res+=str[i];
         }
-        
-        StringBuilder sb=new StringBuilder();
-        while(!st.isEmpty()){
-            char alpha=st.pop();
-            sb.append(alpha);
-         }
-        return sb.toString();
+        return res;
     }
 }
